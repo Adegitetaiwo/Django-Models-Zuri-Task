@@ -6,7 +6,10 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 class Post(models.Model):
 
-    ""
+    """
+    This is the Post Model. It takes care of creating our tables 
+    and validating entries in our database.
+    """
     title = models.CharField(max_length=200)
     text = models.TextField()
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
